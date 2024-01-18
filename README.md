@@ -1,4 +1,4 @@
-# HA-Mqtt-Python-Publisher-Subscriber
+# Mqtt-Python-Publisher-Subscriber
 Contains the python scripts I use to interact with a Mqtt server. There is a publisher one and a subscriptor one. All the configuration parameters are in the configuration.py file.
 
 ## configuration.py:
