@@ -34,18 +34,29 @@ It's not really necessary to configure any of this parameters, and their names h
 ## publish.py
 ```sh
 python .\publish.py
-[2024-01-17 08:02:19,918] DEBUG    publish.py   main(): Logging active for me: publish.py
+[2024-01-18 08:05:19,854] DEBUG    publish.py   main(): Logging active for me: publish.py
+[2024-01-18 08:05:19,914] INFO     publish.py   OnConnect(): Succesfully connected to Mqtt broker
+[2024-01-18 08:05:20,885] DEBUG    publish.py   publish(): Dictionary={'Element': 'WifiSolar', 'Status': 2}
+[2024-01-18 08:05:20,887] INFO     publish.py   publish(): Send {"Element": "WifiSolar", "Status": 2} to topic {display/state}
+[2024-01-18 08:05:20,888] DEBUG    publish.py   main(): For ever loop, sleeping 10
+[2024-01-18 08:05:30,889] DEBUG    publish.py   publish(): Dictionary={'Element': 'WifiSolar', 'Status': 2}
+[2024-01-18 08:05:30,889] INFO     publish.py   publish(): Send {"Element": "WifiSolar", "Status": 2} to topic {display/state}
+[2024-01-18 08:05:30,890] DEBUG    publish.py   main(): For ever loop, sleeping 10
+(...)
 ```
 
-![Figure1](Figure_1.png)
+![MqttExplorerPub](MqttExplorerPub.PNG)
 
 ## subscribe.py
 ```sh
 python .\subscribe.py
-[2024-01-17 08:02:19,918] DEBUG    publish.py   main(): Logging active for me: publish.py
+[2024-01-18 08:12:19,183] DEBUG    subscribe.py main: Logging active for me: subscribe.py
+[2024-01-18 08:12:19,207] INFO     subscribe.py OnConnect(): Succesfully connected to Mqtt broker
+[2024-01-18 08:12:26,007] INFO     subscribe.py OnMessage(): Received {"Element": "WifiSolar", "Status": 0} from topic {display/state}
+[2024-01-18 08:12:26,007] DEBUG    subscribe.py OnMessage(): Dictionary={'Element': 'WifiSolar', 'Status': 0}
+[2024-01-18 08:12:36,005] INFO     subscribe.py OnMessage(): Received {"Element": "WifiSolar", "Status": 1} from topic {display/state}
+[2024-01-18 08:12:36,005] DEBUG    subscribe.py OnMessage(): Dictionary={'Element': 'WifiSolar', 'Status': 1}
 ```
-
-![Figure2](Figure_2.png)
 
 ## Mqtt explorers:
 Mqtt explorer is a very good option in order to be able to see in real time how our messages are being stored in Mqtt. Thanks to Thomas Nordquist! 
