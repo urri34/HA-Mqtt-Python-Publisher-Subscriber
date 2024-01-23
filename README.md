@@ -20,18 +20,14 @@ The password for the username
 The topic under which is going to be published the messages in our Mqtt broker. In my case it's part of a bigger project.
 
 ### Extended configuracion options:
-- LogToFile = 1
-- LogFile=path.dirname(__file__).replace('\\','/')+'/Mqtt_Pub_Subs.log'
-- LogLevel=DEBUG # It can be DEBUG INFO WARNING ERROR CRITICAL
 - Port = 1883
 - ClientId = f'python-mqtt-pub-{randint(0, 1000)}' # Just some value in order to appear in the logs
 - RetryConnectionTime = 5
 - PublishRepetitionTime = 10
-- WaitForLoopTime = 1
 
 It's not really necessary to configure any of this parameters, and their names have to be clear enough in order to know what are the used to. Just one to consider: WaitForLoopTime, dont try to push it to 0, it seems stupid but it takes sometime to construcs the loop and it's the best option I found in order to wait for it.
 
-## publish.py
+## cli_publish.py
 ```sh
 python .\publish.py
 [2024-01-18 08:05:19,854] DEBUG    publish.py   main(): Logging active for me: publish.py
@@ -47,7 +43,7 @@ python .\publish.py
 
 ![MqttExplorerPub](MqttExplorerPub.PNG)
 
-## subscribe.py
+## cli_subscribe.py
 ```sh
 python .\subscribe.py
 [2024-01-18 08:12:19,183] DEBUG    subscribe.py main: Logging active for me: subscribe.py
