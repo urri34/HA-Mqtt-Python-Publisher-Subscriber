@@ -27,7 +27,7 @@ The topic under which is going to be published the messages in our Mqtt broker. 
 
 It's not really necessary to configure any of this parameters, and their names have to be clear enough in order to know what are the used to. Just one to consider: WaitForLoopTime, dont try to push it to 0, it seems stupid but it takes sometime to construcs the loop and it's the best option I found in order to wait for it.
 
-## cli_publish.py
+## publish.py
 ```sh
 python .\publish.py
 [2024-01-18 08:05:19,854] DEBUG    publish.py   main(): Logging active for me: publish.py
