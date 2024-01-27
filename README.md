@@ -41,9 +41,12 @@ python .\publish.py
 (...)
 ```
 
-[![MqttExplorerPub](Images/MqttExplorerPub.PNG)](https://github.com/urri34/Mqtt-Python-Publisher-Subscriber/blob/main/images/MqttExplorerPub.png?raw=true)
+![MqttExplorerPub](https://github.com/urri34/Mqtt-Python-Publisher-Subscriber/blob/main/images/MqttExplorerPub.png?raw=true)
 
 ## cli_subscribe.py
+
+It just subscribe to the topic we specify in the config and gets the dictionary object that is passed as a json. Nothing else.
+
 ```sh
 python .\subscribe.py
 [2024-01-18 08:12:19,183] DEBUG    subscribe.py main: Logging active for me: subscribe.py
@@ -53,6 +56,17 @@ python .\subscribe.py
 [2024-01-18 08:12:36,005] INFO     subscribe.py OnMessage(): Received {"Element": "WifiSolar", "Status": 1} from topic {display/state}
 [2024-01-18 08:12:36,005] DEBUG    subscribe.py OnMessage(): Dictionary={'Element': 'WifiSolar', 'Status': 1}
 ```
+## gui_subscribe.py
+
+I want to try to learn some PySimpleGUI so I made a gui interface for the subscribe. It has something special, as we are building parts of a bigger project, we used to send allways this kind of json object
+
+```sh
+MessageDict = {
+                'Element': 'WifiSolar',
+                'Status': randint(0, 2)
+            }
+```
+In this GUI we are going to generate and image with the name of the Element, and green if Status is 0 or red if status is 1 , or question mark if status is other. It doesnt have any sense for you? sure. Let me finish the big project and every thing will go with sense.
 
 ## Mqtt explorers:
 Mqtt explorer is a very good option in order to be able to see in real time how our messages are being stored in Mqtt. Thanks to Thomas Nordquist! 
