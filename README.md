@@ -41,7 +41,7 @@ python .\publish.py
 (...)
 ```
 
-![MqttExplorerPub](Images/MqttExplorerPub.PNG)
+[![MqttExplorerPub](Images/MqttExplorerPub.PNG)](https://github.com/urri34/Mqtt-Python-Publisher-Subscriber/blob/main/images/MqttExplorerPub.png?raw=true)
 
 ## cli_subscribe.py
 ```sh
