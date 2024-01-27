@@ -41,7 +41,7 @@ python .\publish.py
 (...)
 ```
 
-![MqttExplorerPub](MqttExplorerPub.PNG)
+![MqttExplorerPub](Images/MqttExplorerPub.PNG)
 
 ## cli_subscribe.py
 ```sh
